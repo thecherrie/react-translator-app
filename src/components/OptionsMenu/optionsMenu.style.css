@@ -1,0 +1,25 @@
+.optionsMenuWrapper {
+    width: 100%;
+    display: flex;
+    background: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.optionsMenuWrapper li {
+    padding: 20px;
+}
+
+.optionsMenuWrapper li:hover {
+    cursor: pointer;
+    background: whitesmoke;
+    border-bottom: solid lightskyblue 3px;
+}
+
+.isSelected {
+    border-bottom: solid lightskyblue 3px;
+}

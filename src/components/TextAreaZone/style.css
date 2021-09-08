@@ -1,0 +1,33 @@
+.textAreaZone {
+    flex-direction: column;
+    margin-top: 50px;
+    display: flex;
+    width: 80%;
+    height: 200px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 5px 6px 10px 0px rgba(0,0,0,0.08);
+}
+
+.menuWrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.textAreaWrapper {
+    display: flex;
+    width: 100%;
+}
+
+.languagesWindowWrapper {
+    padding: 20px;
+    background: pink;
+    position: relative;
+    border-radius: 20px;
+}
+
+.icon {
+    margin-top: 5px;
+    padding-right: 10px;
+}

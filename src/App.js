@@ -1,25 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import TextArea from './components/TextArea/textarea.component';
+import TextAreaZone from './components/TextAreaZone/textAreaZone.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends React.Component {
+
+  
+  constructor() {
+    super();
+
+    this.state = {
+      textareaOpened: false,
+    }
+  }
+
+componentDidMount() {
+  fetch("https://nlp-translation.p.rapidapi.com/v1/translate?text=Hello%2C%20world!!&to=es&from=en", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "nlp-translation.p.rapidapi.com",
+		"x-rapidapi-key": "5b76ed2434mshd0bf91c42b04a64p14316ajsn46a65e936aaa"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+}
+
+render() {
+  return(
+    <div>
+      <div className="topWhiteBar">
+        <h1>Translator</h1>
+      </div>
+      <div className="bg-strip">
+        <div className="textAreaZoneWrapper">
+          <TextAreaZone />
+        </div>
+      </div>
     </div>
   );
+}
+
 }
 
 export default App;

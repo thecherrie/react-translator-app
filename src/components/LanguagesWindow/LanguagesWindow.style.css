@@ -1,0 +1,30 @@
+.languageWindowWrapper {
+    position: relative;
+    height: 300px;
+    background: pink;
+    border-bottom: lightgrey 1px solid;
+}
+
+.languageWindow {
+    background: white;
+}
+
+input {
+    width: 100%;
+    padding: 20px;
+    font-size: 15px;
+    border: none;
+}
+
+.languagesList {
+    /* padding: 20px; */
+}
+
+.languagesList li {
+    padding: 20px;
+}
+
+.languagesList li:hover {
+    background: whitesmoke;
+    cursor: pointer;
+}
